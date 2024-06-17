@@ -1,14 +1,22 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path';
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import webExtension from "@samrum/vite-plugin-web-extension";
+import path from "path";
+import { getManifest } from "./src/manifest";
 
-export default defineConfig({
-  plugins: [vue()],
-  build: {
-    rollupOptions: {
-      input: {
-        panel: resolve(__dirname, 'panel.html')  // Vue app panel
+// https://vitejs.dev/config/
+export default defineConfig(() => {
+  return {
+    plugins: [
+      vue(),
+      webExtension({
+        manifest: getManifest(),
+      }),
+    ],
+    resolve: {
+      alias: {
+        "~": path.resolve(__dirname, "./src"),
       },
-    }
-  }
-})
+    },
+  };
+});

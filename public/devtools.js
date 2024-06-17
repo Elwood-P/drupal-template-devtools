@@ -1,8 +1,11 @@
-chrome.devtools.panels.create(
-  "Drupal",
-  "icons/icon48.png",
-  "panel.html",
-  function(panel) {
-    console.log("Drupal Template DevTools Panel created successfully");
-  }
+var _browser;
+if (chrome) {
+  _browser = chrome;
+} else {
+  _browser = browser;
+}
+_browser.devtools.panels.create(
+  "My Panel", // title
+  "icons/icon16.png", // icon
+  "src/entries/devtools/index.html" // content
 );
