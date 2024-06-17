@@ -1,12 +1,18 @@
 <template>
   <main>
-    <PageContent>Popup</PageContent>
+    <p>Open the <strong>Drupal</strong> panel in the Developer Tools.</p>
   </main>
 </template>
 
-<script setup>
-import PageContent from "~/components/PageContent.vue";
-</script>
+<script setup></script>
 
-<style>
+<style scoped>
+p {
+  margin: 16px;
+  font-size: 13px;
+}
+strong {
+  font-weight: 600;
+  color: #1d4ed8;
+}
 </style>
