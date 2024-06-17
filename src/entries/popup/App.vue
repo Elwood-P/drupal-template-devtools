@@ -1,6 +1,6 @@
 <template>
   <main>
-    <p>Open the <strong>Drupal</strong> panel in the Developer Tools.</p>
+    <p>Open the <strong>Drupal</strong> panel in Developer Tools.</p>
   </main>
 </template>
 
