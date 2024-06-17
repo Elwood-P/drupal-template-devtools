@@ -5,7 +5,7 @@ if (chrome) {
   _browser = browser;
 }
 _browser.devtools.panels.create(
-  "My Panel", // title
-  "icons/icon16.png", // icon
-  "src/entries/devtools/index.html" // content
+  "Drupal",
+  "icons/icon16.png",
+  "src/entries/devtools/index.html"
 );

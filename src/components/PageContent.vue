@@ -1,5 +1,5 @@
 <template>
-  <img :src="imageUrl" height="45" alt="" />
+
   <h1>
     <slot></slot>
   </h1>
@@ -7,14 +7,11 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import logo from "~/assets/logo.svg";
+  import { ref } from "vue";
 
-const imageUrl = new URL(logo, import.meta.url).href;
+  const count = ref(0);
 
-const count = ref(0);
-
-const increment = () => (count.value += 1);
+  const increment = () => (count.value += 1);
 </script>
 
 <style>
